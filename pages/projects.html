@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYH - Your Projects</title>
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript"src="/js/materialize.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body class="grey lighten-4">
+    
+    <nav class="z-depth-0">
+        <div class="nav-wrapper container">
+            <a href="/" id="site-title">Around Your Home</a>
+            <span class="right grey-text text-darken-1">
+                <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+            </span>
+
+        </div>
+    </nav>
+
+    <ul id="side-menu" class="sidenav side-menu">
+        <li><a class="subheader">AYH</a></li>
+        <li><a href="/" class="waves-effect">Home</a></li>
+        <li><a href="/pages/tasks.html" class="waves-effect">Tasks</a></li>
+        <li><a href="/pages/supplies.html" class="waves-effect">Supply Needs</a></li>
+        <li><a href="/pages/projects.html" class="waves-effect">Projects</a></li>
+        <li><a href="/pages/contractors.html" class="waves-effect">Contractors</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="/pages/contact.html" class="waves-effect"><i class="material-icons">mail</i>Contact Us</a></li>
+    </ul>
+
+        <!-- NO CONTENT ABOVE THIS LINE UP TO BODY NEEDS TO CHANGE -->
+
+        <div class="tasks container grey-text text-darken-1">
+            <div class="card-panel task white row">
+                <div class="task-detail">
+                    <div class="task-title">Paint the back deck</div>
+                    <div class="task-notes">Thinking dark blue or mauve</div>
+                    <div class="task-delete">
+                        <i class="material-icons">delete_forever</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="center">
+            <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+                <i class="material-icons">add</i>
+            </a>
+        </div>
+    
+        <div id="side-form" class="sidenav side-form">
+            <form class="add-task container section">
+                <h6>New Contractors</h6>
+                <div class="divider"></div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter project" id="task-add" class="validate">
+                        <label for="task-add">Project</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter project details or notes" id="task-add" class="validate">
+                        <label for="task-add">Project Notes</label>
+                    </div>
+
+    
+    
+                    <div class="input-field center">
+                        <button class="btn-small">Add</button>
+                    </div>
+    
+                
+            </form>
+        </div>
+
+
+    <script src="/js/ui.js"></script>
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>

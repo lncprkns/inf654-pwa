@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact AYH</title>
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript"src="/js/materialize.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body class="grey lighten-4">
+    
+    <nav class="z-depth-0">
+        <div class="nav-wrapper container">
+          <a href="/" id="site-title">Around Your Home</a>
+            <span class="right grey-text text-darken-1">
+                <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+            </span>
+
+        </div>
+    </nav>
+
+    <ul id="side-menu" class="sidenav side-menu">
+      <li><a class="subheader">AYH</a></li>
+        <li><a href="/" class="waves-effect">Home</a></li>
+        <li><a href="/pages/tasks.html" class="waves-effect">Tasks</a></li>
+        <li><a href="/pages/supplies.html" class="waves-effect">Supply Needs</a></li>
+        <li><a href="/pages/projects.html" class="waves-effect">Projects</a></li>
+        <li><a href="/pages/contractors.html" class="waves-effect">Contractors</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="/pages/contact.html" class="waves-effect"><i class="material-icons">mail</i>Contact Us</a></li>
+    </ul>
+
+    <!-- NO CONTENT ABOVE THIS LINE UP TO BODY NEEDS TO CHANGE -->
+
+    <div class="container">
+        <h1>Contact Us!</h1>
+        <p>We would love to hear from you!<p>
+        <p>All Fields Are Required</p>
+        <form target="_blank" action="https://formsubmit.co/cb10f1b0e33f689393b6241e435df1ff" method="POST">
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col">
+                <input type="text" name="name" class="form-control" placeholder="Name" required>
+              </div>
+              <div class="col">
+                <input type="email" name="email" placeholder="Email Address" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" class="form-control" name="message" required></textarea>
+          </div>
+          <input type="text" name="_honey" style="display:none"> <!--Line is meant to help prevent bots from spamming the contact me.-->
+          <button type="submit" class="btn btn-lg btn-dark btn-block">Send</button>
+        </form>
+      </div>
+
+
+    <script src="/js/ui.js"></script>
+
+</body>
+
+</html>
