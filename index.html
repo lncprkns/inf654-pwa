@@ -31,6 +31,19 @@
         <li><a href="/pages/supplies.html" class="waves-effect">Supply Needs</a></li>
         <li><a href="/pages/projects.html" class="waves-effect">Projects</a></li>
         <li><a href="/pages/contractors.html" class="waves-effect">Contractors</a></li>
+        <li class="logged-in">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-account">Account</a>
+        </li>
+        <li class="logged-in">
+            <a href="#" class="waves-effect" id="logout">Logout</a>
+        </li>
+        <li class="logged-out">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-login">Login</a>
+        </li>
+        <li class="logged-out">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-signup">Sign Up</a>
+        </li>
+        
         <li>
             <div class="divider"></div>
         </li>
@@ -56,6 +69,47 @@
         <a href="/pages/contractors.html">
             <div class="card-panel white row">Your Contractors</div>
         </a>
+    </div>
+
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <h4>Sign Up</h4>
+            <form id="signup-form">
+                <div class="input-field">
+                    <input type="email" id="signup-email" required>
+                    <label for="signup-email">Email Address </label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signup-password" required>
+                    <label for="signup-password">Password </label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Login</h4>
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required>
+                    <label for="login-email">Email Address </label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required>
+                    <label for="login-password">Password </label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account details</h4><br />
+            <div class="account-details"></div>
+        </div>
     </div>
 
     <script src="/js/ui.js"></script>

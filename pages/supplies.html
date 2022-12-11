@@ -39,17 +39,8 @@
 
         <!-- NO CONTENT ABOVE THIS LINE UP TO BODY NEEDS TO CHANGE -->
 
-    <div class="tasks container grey-text text-darken-1">
-        <div class="card-panel task white row">
-            <div class="task-detail">
-                <div class="task-title">Batteries</div>
-                <div class="task-notes">4 pack of AA</div>
-                <div class="task-notes">Don't get them at Home Depot</div>
-                <div class="task-delete">
-                    <i class="material-icons">delete_forever</i>
-                </div>
-            </div>
-        </div>
+    <div class="supplies container grey-text text-darken-1">
+
     </div>
 
     <div class="center">
@@ -58,21 +49,21 @@
         </a>
     </div>
 
-    <div id="side-form" class="sidenav side-form">
-        <form class="add-task container section">
-            <h6>New Task</h6>
+    <div id="side-form" class="add-new-supply sidenav side-form">
+        <form id="new-supply" class="add-task container section">
+            <h6>New Supply</h6>
             <div class="divider"></div>
                 <div class="input-field">
-                    <input type="text" placeholder="Enter Item" id="task-add" class="validate">
-                    <label for="task-add">Task</label>
+                    <input type="text" placeholder="Enter Item" id="addSupply" class="validate">
+                    <label for="addSupply">Item</label>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Enter Item Info" id="task-add-notes" class="validate">
-                    <label for="task-add-notes">Item Info (e.g. Quantity, brand, color, etc.)</label>
+                    <input type="text" placeholder="Enter Item Info" id="addSupplyInfo" class="validate">
+                    <label for="addSupplyInfo">Info (e.g. Quantity, brand, etc.)</label>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Other Notes" id="task-add-notes" class="validate">
-                    <label for="task-add-notes">Enter Other Notes</label>
+                    <input type="text" placeholder="Other Notes" id="addSupplyNotes" class="validate">
+                    <label for="addSupplyNotes">Enter Other Notes</label>
                 </div>
 
                 <div class="input-field center">
@@ -84,8 +75,9 @@
     </div>
 
 
-    <script src="/js/ui.js"></script>
+    <script src="/js/uisupplies.js"></script>
     <script src="/js/app.js"></script>
+    <script type="module" src="/js/dbsupplies.js"></script>
 
 </body>
 

@@ -1,5 +1,5 @@
-const staticCache = 'Static-v1'
-const dynamicCache = 'Dynamic-v1'
+const staticCache = 'Static-v18'
+const dynamicCache = 'Dynamic-v21'
 
 const assets = [
     "/",
@@ -17,6 +17,16 @@ const assets = [
     "https://fonts.googleapis.com/icon?family=Material+Icons"
 ]
 
+const limitCacheSize = (name, size) => {
+    caches.open(name).then((cache) => {
+        cache.keys().then((keys) => {
+            if (keys.length > size) {
+                cache.delete(keys[0]).then((limitCacheSize(name, size)))
+            }
+        })
+    })
+}
+
 self.addEventListener('install', function(event) {
     console.log(`SW: Event fired: ${event.type}`)
     event.waitUntil(caches.open(staticCache).then(function (cache) {
@@ -27,17 +37,20 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('activate', function(event) {
     event.waitUntil(caches.keys().then((keys) => {
-        return Promise.all(keys.filter((key) => key !== staticCache).map((key) => caches.delete(key)))
+        return Promise.all(keys.filter((key) => key !== staticCache && key !== dynamicCache).map((key) => caches.delete(key)))
     }))
 })
 
 self.addEventListener('fetch', function(event) {
+    if(event.request.url.indexOf("firestore.googleapis.com") === -1) {
     event.respondWith(caches.match(event.request).then((response) => {
         return (response || fetch(event.request).then((fetchRes) => {
             return caches.open(dynamicCache).then((cache) => {
                 cache.put(event.request.url, fetchRes.clone())
+                limitCacheSize(dynamicCache, 15)
                 return fetchRes
             })
         }))
     }).catch(() => caches.match('/pages/fallback.html')))
+}
 })

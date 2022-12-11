@@ -23,7 +23,10 @@ nav .sidenav-trigger {
 
 /* task styles */
 .tasks,
-.home {
+.home,
+.contractors,
+.projects,
+.supplies {
   margin-top: 20px;
 }
 .card-panel.task {
