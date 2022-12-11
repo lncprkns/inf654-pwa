@@ -1,13 +1,3 @@
-//setup materialize components
-
-document.addEventListener("DOMContentLoaded", function() {
-    var modals = document.querySelectorAll(".modals")
-    M.Modal.init(modals)
-
-    var items = document.querySelectorAll(".collapsible")
-    M.Collapsible.init(items)
-})
-
 const tasks = document.querySelector(".tasks")
 
 document.addEventListener("DOMContentLoaded", function() {
